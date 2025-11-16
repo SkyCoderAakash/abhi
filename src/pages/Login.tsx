@@ -5,6 +5,7 @@ import Input from "../common/input";
 import Button from "../common/button";
 import { validateForm } from "../utils/validate";
 import { BACKEND_URL } from "../constants/url";
+import type { InputTypes } from "../types";
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -90,7 +91,7 @@ const Login = () => {
                   key={item.name}
                   label={item.label}
                   name={item.name}
-                  type={item.type}
+                  type={item.type as InputTypes}
                   placeholder={item.placeholder}
                   required={item.required}
                   value={form[item.name as keyof typeof form]}

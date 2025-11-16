@@ -5,6 +5,7 @@ import Input from "../common/input";
 import Button from "../common/button";
 import { validateForm } from "../utils/validate";
 import { BACKEND_URL } from "../constants/url";
+import type { InputTypes } from "../types";
 
 type Role = "buyer" | "seller";
 
@@ -124,7 +125,7 @@ const Register = () => {
                 <Input
                   key={input.name}
                   label={input.label}
-                  type={input.type}
+                  type={input.type as InputTypes}
                   name={input.name}
                   placeholder={input.placeholder}
                   required={input.required}

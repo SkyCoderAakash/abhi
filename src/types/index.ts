@@ -28,3 +28,5 @@ export interface RegisterData {
   password: string;
   role: "buyer" | "seller";
 }
+
+export type InputTypes = "text" | "number" | "password" | "textarea" | "select";

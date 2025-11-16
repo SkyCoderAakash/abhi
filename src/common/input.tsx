@@ -1,5 +1,6 @@
 import React, { useState, useId } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import type { InputTypes } from "../types";
 
 interface OptionType {
   label: string;
@@ -9,7 +10,7 @@ interface OptionType {
 interface InputProps {
   label?: string;
   required?: boolean;
-  type: "text" | "number" | "password" | "textarea" | "select";
+  type: InputTypes;
   name: string;
   options?: OptionType[];
   placeholder?: string;
